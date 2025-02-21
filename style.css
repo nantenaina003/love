@@ -1,0 +1,212 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+@font-face  {
+ font-family: 'autobahn';
+ src: url('autobahn.ttf') format('truetype') ;
+}
+@font-face  {
+ font-family: 'night_sky';
+ src: url('Airplanes in the Night Sky.ttf') format('truetype') ;
+}
+.fond{
+	width: 100%;
+	height: 100vh;
+	background: url('photo6.png');
+	background-size: cover;
+	background-position: center;
+}
+.centre{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.texte{
+	color: white;
+	text-align: center;
+	animation: bounceIn,
+ typewriter 3s steps(150) 7s 1 normal both, 
+ blinkingCursor 500ms steps(150) normal;
+	border-right: 2px solid #ccc;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: 5px auto;
+	font-family: night_sky;
+}
+.photo{
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	object-position: center;
+	border: 0.5px solid white;
+	border-radius: 100%;
+	margin: 20px 0px 20px 0px;
+	box-shadow: 0 0 15px #ccc,
+	0 0 25px #ccc,
+	inset 0 0 15px #ccc;
+	animation: bounceIn 1s infinite normal;
+	animation-duration: 5s;
+}
+.button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+.yes,
+.no{
+	width: 70px;
+	height: 35px;
+	background: transparent;
+	color: white;
+	border-radius: 4px;
+	box-shadow: 0 0 10px #ccc,
+	0 0 15px #ccc;
+	cursor: pointer;
+	border: none;
+	font-size: 20px;
+	animation: bounceIn;
+	animation-duration: 7s;
+}
+.yes:hover{
+	background: #05FF25A1;
+	transition: 0.5s;
+}
+.no:hover{
+	background: #FF1515A1;
+	transition: 0.5s;
+}
+
+
+/* Animation */
+@keyframes typewriter {
+  from { 
+  	width: 0;
+  }
+  to {
+   width: 78%; 
+  }
+}
+@keyframes blinkingCursor {
+  from {
+  	border-right-color: rgba(255,255,255,.75);
+  }
+  to {
+  	border-right-color: transparent;
+  }
+}
+.yes.good{
+	width: 100%;
+	transition: 0.5s;
+}
+.alert{
+	text-align: center;
+	font-size: 19px;
+	width: 100%;
+	padding: 10px;
+	background: #00AE16A8;
+	color: white;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #ccc;
+	display: none;
+}
+.alert:hover{
+	background: #05FF25A1;
+	transition: 0.5s;
+}
+.alert.ok{
+	display: block;
+}
+.success{
+	font-family: autobahn;
+	text-align: center;
+}
+.button.remove{
+	display: none;
+}
+.line{
+color: white;
+text-align: center;
+margin: 20px 0px 0px;
+animation: bounceIn;
+animation-duration: 5s;
+}
+.follow{
+	text-align: center;
+	color: white;
+	font-size: 19px;
+	font-family: night_sky;
+	margin: 5px 0px;
+	animation: bounceIn;
+	animation-duration: 3s;
+}
+.icon{
+	display: flex;
+	justify-content: space-evenly;
+}
+.social{
+	width: 40px;
+	height: 40px;
+	background: #FFFFFF6B;
+	border-radius: 5px;
+	padding: 3px;
+	animation: bounceIn;
+	animation-duration: 3s;
+}
+.social:hover{
+	background: #FFFFFFBF;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+.fond2{
+	width: 100%;
+	height: 100vh;
+	background: url('love.png') no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.animation{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.loader {
+  font-size: 48px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #263238;
+  box-sizing: border-box;
+  text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
+  letter-spacing: 2px;
+  position: relative;
+}
+.loader::after {
+  content: 'Loading';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: animloader 6s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+} 
