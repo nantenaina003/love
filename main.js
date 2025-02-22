@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
        button.classList.add('remove');
     });
 
-    noButton.addEventListener('mouseover', function() {
+    noButton.addEventListener('mouseenter', function() {
         const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
         const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
         noButton.style.position = 'absolute';
